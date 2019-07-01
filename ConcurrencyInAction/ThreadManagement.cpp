@@ -1,24 +1,33 @@
 #include "stdafx.h"
 #include "ThreadManagement.h"
+#include <iostream>
 
+using namespace std;
 
-ThreadManagement::ThreadManagement()
+namespace threadmanagement
 {
-}
+	ThreadManagement::ThreadManagement()
+	{
+	}
 
 
-ThreadManagement::~ThreadManagement()
-{
-}
+	ThreadManagement::~ThreadManagement()
+	{
+	}
 
-void ThreadManagement::operator()() const
-{
-}
+	void ThreadManagement::operator()()
+	{
+		do_something();
+		do_something_else();
+	}
 
-void ThreadManagement::do_something()
-{
-}
+	void ThreadManagement::do_something()
+	{
+		cout << "Do something" << endl;
+	}
 
-void ThreadManagement::do_something_else()
-{
+	void ThreadManagement::do_something_else()
+	{
+		cout << "Do something else" << endl;
+	}
 }
