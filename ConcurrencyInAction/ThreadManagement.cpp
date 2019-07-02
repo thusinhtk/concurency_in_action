@@ -15,7 +15,7 @@ namespace threadmanagement
 	{
 	}
 
-	void ThreadManagement::operator()()
+	void ThreadManagement::operator()() const
 	{
 		do_something();
 		do_something_else();
@@ -23,11 +23,15 @@ namespace threadmanagement
 
 	void ThreadManagement::do_something()
 	{
-		cout << "Do something" << endl;
+		cout << "Do something 1" << endl;
 	}
 
 	void ThreadManagement::do_something_else()
 	{
-		cout << "Do something else" << endl;
+		cout << "Do something else 2" << endl;
+	}
+	void ThreadManagement::do_something_else_3()
+	{
+		cout << "Do something else 3" << endl;
 	}
 }

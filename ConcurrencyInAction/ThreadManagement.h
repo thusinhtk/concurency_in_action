@@ -11,9 +11,10 @@ namespace threadmanagement
 
 #pragma region Launching a thread
 
-		void operator()();
-		void do_something();
-		void do_something_else();
+		void operator()() const;
+		static void do_something();
+		static void do_something_else();
+		static void do_something_else_3();
 
 #pragma endregion
 
